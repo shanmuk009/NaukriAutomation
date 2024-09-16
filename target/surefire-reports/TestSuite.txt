@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 102.363 s <<< FAILURE! - in TestSuite
+com.tests.NaukriTests.updatedResumeInNaukri  Time elapsed: 1.924 s  <<< FAILURE!
+org.openqa.selenium.InvalidArgumentException: 
+invalid argument: File not found : D:\Eclipse WorkPlace\practice\Documents\Shanmuka_QA_Automation_Sep2024.pdf
+  (Session info: chrome=128.0.6613.138)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [346a1251f7a9f86efcab416e42df31d2, sendKeysToElement {id=f.6571ADD63F8A21BF19C170AD06110777.d.B278BEA79C3F16662FC1FDB2F50018F1.e.181, value=[Ljava.lang.CharSequence;@7d199c68}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54875}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54875/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (346a1251f7a9f86efcab416e42df31d2)] -> xpath: //input[@type='file'][@id='attachCV']]
+Session ID: 346a1251f7a9f86efcab416e42df31d2
+	at com.tests.NaukriTests.updatedResumeInNaukri(NaukriTests.java:64)
+
