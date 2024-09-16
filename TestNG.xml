@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Naukri Application">
+
+	
+
+	<test name="Naukri Tests">
+		
+		<classes>
+			<class name="com.tests.NaukriTests">
+				<methods>
+					<include name="updatedResumeInNaukri"/>
+					<include name="applyForRecommenedJobs"/>
+					<include name="updateResumeHeadLine"/>
+				</methods>
+			</class>
+		</classes>
+	</test>   
+   
+  
+</suite> 

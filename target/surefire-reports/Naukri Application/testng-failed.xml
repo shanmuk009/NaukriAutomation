@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Naukri Application]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Naukri Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.tests.NaukriTests">
+        <methods>
+          <include name="afterClass"/>
+          <include name="afterTest"/>
+          <include name="updatedResumeInNaukri"/>
+          <include name="beforeTest"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.tests.NaukriTests -->
+    </classes>
+  </test> <!-- Naukri Tests(failed) -->
+</suite> <!-- Failed suite [Naukri Application] -->

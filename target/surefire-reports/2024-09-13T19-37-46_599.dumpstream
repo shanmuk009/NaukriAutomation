@@ -1,0 +1,4 @@
+# Created at 2024-09-13T19:37:53.670
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Eclipse WorkPlace\naukri_Automation\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+
