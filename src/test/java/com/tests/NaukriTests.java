@@ -15,6 +15,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import com.baseclass.BaseClass;
 import com.page.objects.HomePage;
+import com.page.objects.JobSearchPage;
 import com.page.objects.JobsPage;
 import com.page.objects.LoginPage;
 import com.page.objects.ProfilePage;
@@ -27,6 +28,7 @@ public class NaukriTests extends BaseClass {
 	HomePage hp;
 	ProfilePage pp;
 	JobsPage jp;
+	JobSearchPage jsp;
 	String resumeName;
 	private static boolean isLoggedin = false;
 
@@ -38,6 +40,7 @@ public class NaukriTests extends BaseClass {
 		hp = new HomePage(driver);
 		pp = new ProfilePage(driver);
 		jp = new JobsPage(driver);
+		jsp=new JobSearchPage(driver);
 
 	}
 
@@ -80,14 +83,32 @@ public class NaukriTests extends BaseClass {
 	public void applyForRecommenedJobs() {
 
 		hp.naviagateToJobsPage();
-
-		jp.clickOnDesiredJobTab("profile");
+		
 		jp.clickOnDesiredJobTab("you might like");
 
 		jp.applyForJobs();
+		
+		jp.clickOnDesiredJobTab("profile");
+		jp.applyForJobs();
+		
+		jp.clickOnDesiredJobTab("preferences");
+
+		jp.applyForJobs();
+		
+		
 
 		hp.scrollToPageEnd();
 
+	}
+	
+
+	@Test(description = "user search jobs based on designation, exp , location and apply for desired Jobs",priority = 3)
+	public void searchJobsAndApply() {
+		hp.searchJobs();
+		jsp.selectFreshnessFromDropDown();
+		jsp.applyForJobs();
+		
+		hp.scrollToPageEnd();
 	}
 
 	@AfterClass(description = "LogOut from Naukri")
