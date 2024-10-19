@@ -13,8 +13,9 @@ import com.utilities.ReadConfig;
 
 public class ProfilePage {
 
-	ReadConfig config = new ReadConfig();
+	
 	private WebDriver driver;
+	ReadConfig config = new ReadConfig();
 
 	// Constructor
 	public ProfilePage(WebDriver driver) {
@@ -22,6 +23,8 @@ public class ProfilePage {
 		PageFactory.initElements(driver, this);
 	}
 
+	@FindBy(css=".crossIcon.chatBot")
+	private WebElement chatbot_cross;
 	@FindBy(xpath = "//input[@type='file'][@id='attachCV']")
 	private WebElement updateResumeBtn;
 	@FindBy(css = "span[data-title='delete-resume']>.icon")
@@ -37,6 +40,18 @@ public class ProfilePage {
 	@FindBy(xpath = "//p[contains(text(),'delete the resume?')]/following-sibling::div/button")
 	private WebElement deleteResumeConfirmBtn;
 
+	
+	public void closeChatBot() {
+		try {
+			if (chatbot_cross.isDisplayed()) {
+				chatbot_cross.click();
+			}
+		} catch (Exception e) {
+			System.out.println("An unexpected error occurred: " + e.getMessage());
+		}
+	}
+
+	
 	public void deleteResume() {
 		deleteResumeIcon.click();
 		deleteResumeConfirmBtn.click();
@@ -75,5 +90,6 @@ public class ProfilePage {
 		saveResumeHeadlineBtn.click();
 
 	}
+
 
 }
