@@ -63,7 +63,8 @@ public class NaukriTests extends BaseClass {
 
 	@Test(description = "User Go To ProfilePage and Update the Resume",priority = 0)
 	public void updatedResumeInNaukri() {
-
+         //close the chatbot in profilepage if appears
+		 pp.closeChatBot();
 		// Update resume
 		resumeName = readconfig.getPropertyValue("resumeName");
 		pp.updateResume(resumeName);
